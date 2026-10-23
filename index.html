@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f5f8">
+  <meta name="description" content="مِعيار منصة أكاديمية لمراجعة وتقييم الإجابات المقالية والقصيرة، مع إبقاء قرار الدرجة النهائي بيد المدرّس.">
+  <title>مِعيار | منصة التقييم الأكاديمي</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#landing" aria-label="مِعيار">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong data-i18n="brand">مِعيار</strong><small data-i18n="brandSub">منصة التقييم الأكاديمي</small></span>
+      </a>
+
+      <p class="nav-label" data-i18n="mainMenu">القائمة الرئيسية</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#dashboard" class="nav-link active" data-page="dashboard"><span class="nav-icon" aria-hidden="true">◫</span><span data-i18n="dashboard">لوحة التحكم</span></a>
+        <a href="#exams" class="nav-link" data-page="exams"><span class="nav-icon" aria-hidden="true">▤</span><span data-i18n="exams">الامتحانات</span><span class="nav-count" id="exam-count">3</span></a>
+        <a href="#upload" class="nav-link" data-page="upload"><span class="nav-icon" aria-hidden="true">↑</span><span data-i18n="upload">رفع الأوراق</span></a>
+        <a href="#grading" class="nav-link" data-page="grading"><span class="nav-icon" aria-hidden="true">✓</span><span data-i18n="grading">مراجعة التصحيح</span><span class="nav-dot"></span></a>
+        <a href="#results" class="nav-link" data-page="results"><span class="nav-icon" aria-hidden="true">▥</span><span data-i18n="results">النتائج والتقارير</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="#settings" class="nav-link" data-page="settings"><span class="nav-icon" aria-hidden="true">⛭</span><span data-i18n="settings">الإعدادات</span></a>
+        <div class="help-card">
+          <div class="help-icon" aria-hidden="true">?</div>
+          <strong data-i18n="helpTitle">هل تحتاج إلى مساعدة؟</strong>
+          <p data-i18n="helpText">تعرّف على خطوات إعداد أول امتحان.</p>
+          <a href="#guide" data-page="guide" data-i18n="helpLink">دليل الاستخدام <span aria-hidden="true">←</span></a>
+        </div>
+        <button class="profile-button" type="button">
+          <span class="profile-avatar">م</span>
+          <span class="profile-copy"><strong data-i18n="profName">د. مريم حسن</strong><small data-i18n="profRole">عضو هيئة تدريس</small></span>
+          <span class="profile-more" aria-hidden="true">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Open menu"><span></span><span></span><span></span></button>
+        <div class="breadcrumb"><span data-i18n="workspace">كلية العلوم</span><span class="breadcrumb-sep">/</span><strong id="page-breadcrumb" data-i18n="dashboard">لوحة التحكم</strong></div>
+        <div class="topbar-actions">
+          <span class="term-pill"><span class="status-dot"></span><span data-i18n="term">الفصل الدراسي الأول 2025</span></span>
+          <button class="language-button language-toggle" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+          <button class="icon-button notification-button" type="button" aria-label="Notifications"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg><i></i></button>
+        </div>
+      </header>
+      <div class="page-container" id="page-content" tabindex="-1"></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
